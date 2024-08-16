@@ -173,14 +173,14 @@ Request Body:
 
 
 {
-  "name": "Updated Course Name",
+  "title": "Updated Course Name",
   "description": "Updated Course Description"
 }
 Response:
 
 {
   "id": "course_id",
-  "name": "Updated Course Name",
+  "title": "Updated Course Name",
   "description": "Updated Course Description"
 }
 ```
