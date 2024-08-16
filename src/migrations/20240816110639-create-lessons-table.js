@@ -19,7 +19,7 @@ module.exports = {
       courseId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Courses', // Name of the table, not the model
+          model: 'Courses',
           key: 'id',
         },
         onDelete: 'CASCADE',
