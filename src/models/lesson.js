@@ -1,3 +1,4 @@
+// src/models/lesson.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
@@ -16,6 +17,7 @@ const Lesson = sequelize.define('Lesson', {
       model: 'Courses',
       key: 'id',
     },
+    onDelete: 'CASCADE',
   },
 });
 
