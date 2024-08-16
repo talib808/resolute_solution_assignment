@@ -15,23 +15,25 @@ module.exports = {
       },
       content: {
         type: Sequelize.TEXT,
-        allowNull: true,
       },
       courseId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Courses',
+          model: 'Courses', // Name of the table, not the model
           key: 'id',
         },
         onDelete: 'CASCADE',
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
     });
   },
