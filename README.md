@@ -201,6 +201,8 @@ Database Design: The Users, Courses, and Lessons tables are designed to store us
 ```
 ```
 Security: Passwords are hashed using bcryptjs, and JWT tokens are used for authentication.
+```
+```
 Caching: Redis is used to cache course data for improved performance.
 ```
 ### Approach
@@ -216,6 +218,8 @@ Lessons Table: Stores information about lessons linked to courses using a foreig
 ### Security and Performance
 ```
 Security: User passwords are hashed before storing them. JWT tokens are used for secure authentication.
+```
+```
 Performance: Redis caching is used to reduce the number of database queries for frequently accessed data.
 ```
 ### Challenges and Solutions
