@@ -58,6 +58,7 @@ npm start
 
 
 ### API Documentation
+```
 User Routes
 Register a User
 
@@ -81,8 +82,13 @@ Response:
     "email": "string"
   }
 }
+
+```
+
 Login a User
 
+
+```
 Endpoint: POST /api/users/login
 
 Request Body:
@@ -103,7 +109,11 @@ Response:
     "email": "string"
   }
 }
+
+```
 Course Routes
+
+```
 Get All Courses
 
 Endpoint: GET /api/courses
@@ -124,8 +134,11 @@ Response:
     ]
   }
 ]
+
+```
 Create a Course
 
+```
 Endpoint: POST /api/courses
 
 Request Body:
@@ -156,8 +169,10 @@ Response:
     }
   ]
 }
-Update a Course
 
+```
+Update a Course
+```
 Endpoint: PUT /api/courses/:id
 
 Request Body:
@@ -174,8 +189,9 @@ Response:
   "name": "Updated Course Name",
   "description": "Updated Course Description"
 }
+```
 Delete a Course
-
+```
 Endpoint: DELETE /api/courses/:id
 
 Response:
@@ -184,16 +200,22 @@ Response:
 {
   "message": "Course deleted"
 }
+```
 ### Assumptions and Decisions
-
+```
 Database Design: The Users, Courses, and Lessons tables are designed to store user information and course-related data, with foreign keys linking lessons to courses.
 
-
+```
+```
 Security: Passwords are hashed using bcryptjs, and JWT tokens are used for authentication.
+
 Caching: Redis is used to cache course data for improved performance.
+
+```
 ### Approach
 
 ### Database Design and Schema
+```
 Users Table: Stores user information including username, email, and hashed password.
 Courses Table: Stores information about courses.
 Lessons Table: Stores information about lessons linked to courses using a foreign key.
@@ -203,3 +225,5 @@ Performance: Redis caching is used to reduce the number of database queries for 
 Challenges and Solutions
 Database Migrations: Initially faced issues with missing migration files and configuration. Resolved by creating appropriate migration files and ensuring correct configuration in config.json.
 Data Relationships: Managed complex relationships between courses and lessons by defining foreign keys and ensuring proper migration and model definitions.
+
+```
