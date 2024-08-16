@@ -44,10 +44,10 @@ Create a .env file in the root directory with the following content:
 - Replace yourpassword with your actual PostgreSQL password.
 
 ### Run Migrations
+
+- Initialize and migrate the database:
+
 ```
-Initialize and migrate the database:
-
-
 npx sequelize-cli db:migrate
 
 ```
