@@ -29,17 +29,17 @@ npm install
 
 ```
 ### Configure Environment Variables
-
+```
 Create a .env file in the root directory with the following content:
+```
 
-
-DB_NAME=resoluteServer
-DB_USER=postgres
-DB_PASS=yourpassword
-DB_HOST=localhost
-JWT_SECRET=talib123456
-DB_PORT=5433
-PORT=3000
+- DB_NAME=resoluteserver
+- DB_USER=postgres
+- DB_PASS=yourpassword
+- DB_HOST=localhost
+- JWT_SECRET=talib123456
+- DB_PORT=5433
+- PORT=3000
 
 - Replace yourpassword with your actual PostgreSQL password.
 
