@@ -60,7 +60,55 @@ npm start
 
 ### API Documentation
 
-User Routes
+
+### Search Functionality
+
+- Search Content
+
+- Endpoint: GET /api/search
+
+- Query Parameters:
+```
+query: The search term to look for in the title and description fields of courses, and in the title and content fields of lessons.
+```
+```
+URL: GET http://localhost:3000/api/search?query=Nest.js
+
+```
+- Response
+```
+{
+    "courses": [
+        {
+            "id": 10,
+            "title": "Introduction to Nest.js",
+            "description": "A beginner's course on Nest.js",
+            "createdAt": "2024-08-16T11:49:14.746Z",
+            "updatedAt": "2024-08-16T11:49:14.746Z"
+        }
+    ],
+    "lessons": [
+        {
+            "id": 3,
+            "title": "Getting Started with Nest.js",
+            "content": "This lesson covers the basics of Nest.js...",
+            "courseId": 10,
+            "createdAt": "2024-08-16T11:49:14.851Z",
+            "updatedAt": "2024-08-16T11:49:14.851Z"
+        },
+        {
+            "id": 4,
+            "title": "Nest.js Modules",
+            "content": "This lesson covers how to use modules in Nest.js...",
+            "courseId": 10,
+            "createdAt": "2024-08-16T11:49:14.851Z",
+            "updatedAt": "2024-08-16T11:49:14.851Z"
+        }
+    ]
+}
+```
+
+- User Routes
 ```
 Register a User
 
@@ -85,7 +133,7 @@ Response:
   }
 }
 ```
-Login a User
+- Login a User
 ```
 Endpoint: POST /api/users/login
 
@@ -108,7 +156,7 @@ Response:
   }
 }
 ```
-Course Routes
+- Course Routes
 ```
 Get All Courses
 
@@ -131,7 +179,7 @@ Response:
   }
 ]
 ```
-Create a Course
+- Create a Course
 ```
 Endpoint: POST /api/courses
 
@@ -165,7 +213,7 @@ Response:
 }
 
 ```
-Update a Course
+- Update a Course
 ```
 Endpoint: PUT /api/courses/:id
 
@@ -184,7 +232,7 @@ Response:
   "description": "Updated Course Description"
 }
 ```
-Delete a Course
+- Delete a Course
 ```
 Endpoint: DELETE /api/courses/:id
 
