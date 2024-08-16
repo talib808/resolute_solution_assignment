@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code for the Resolute Solution Assignment. The application includes functionality for user registration, authentication, and course management. It utilizes Sequelize ORM for database interactions and Redis for caching.
+The application includes functionality for user registration, authentication, and course management. It utilizes Sequelize ORM for database interactions and Redis for caching.
 
 ## Setup Instructions
 
