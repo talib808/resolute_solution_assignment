@@ -2,24 +2,24 @@
 // const Lesson = require('../models/lesson');
 const { Course, Lesson } = require('../models');
 
-// const redis = require('redis');
-// const client = redis.createClient();
+const redis = require('redis');
+const client = redis.createClient();
 
-// exports.getCourses = async (req, res) => {
-//   client.get('courses', async (err, courses) => {
-//     if (courses) {
-//       res.json(JSON.parse(courses));
-//     } else {
-//       try {
-//         const courses = await Course.findAll({ include: [Lesson] });
-//         client.setex('courses', 3600, JSON.stringify(courses)); // Cache for 1 hour
-//         res.json(courses);
-//       } catch (err) {
-//         res.status(400).json({ error: err.message });
-//       }
-//     }
-//   });
-// };
+exports.getCourses = async (req, res) => {
+  client.get('courses', async (err, courses) => {
+    if (courses) {
+      res.json(JSON.parse(courses));
+    } else {
+      try {
+        const courses = await Course.findAll({ include: [Lesson] });
+        client.setex('courses', 3600, JSON.stringify(courses));
+        res.json(courses);
+      } catch (err) {
+        res.status(400).json({ error: err.message });
+      }
+    }
+  });
+};
 
 
 
