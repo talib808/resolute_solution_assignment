@@ -1,0 +1,27 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "12345",
+      "database": "resoluteserver",
+      "host": "localhost",
+      "dialect": "postgres",
+      "port": 5433
+    },
+    "test": {
+      "username": "postgres",
+      "password": "12345",
+      "database": "test_database",
+      "host": "localhost",
+      "dialect": "postgres",
+      "port": 5433
+    },
+    "production": {
+      "username": "postgres",
+      "password": "12345",
+      "database": "production_database",
+      "host": "localhost",
+      "dialect": "postgres",
+      "port": 5433
+    }
+  }
+  
