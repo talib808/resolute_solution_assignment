@@ -165,18 +165,137 @@ Endpoint: GET /api/courses
 Response:
 
 [
-  {
-    "id": "course_id",
-    "name": "Course Name",
-    "description": "Course Description",
-    "lessons": [
-      {
-        "id": "lesson_id",
-        "title": "Lesson Title",
-        "content": "Lesson Content"
-      }
-    ]
-  }
+    {
+        "id": 9,
+        "title": "Introduction to Node.js",
+        "description": "A beginner's course on Node.js",
+        "createdAt": "2024-08-16T11:40:58.945Z",
+        "updatedAt": "2024-08-16T11:40:58.945Z",
+        "Lessons": [
+            {
+                "id": 1,
+                "title": "Getting Started with Node.js",
+                "content": "This lesson covers the basics of Node.js...",
+                "courseId": 9,
+                "createdAt": "2024-08-16T11:40:59.029Z",
+                "updatedAt": "2024-08-16T11:40:59.029Z"
+            },
+            {
+                "id": 2,
+                "title": "Node.js Modules",
+                "content": "This lesson covers how to use modules in Node.js...",
+                "courseId": 9,
+                "createdAt": "2024-08-16T11:40:59.029Z",
+                "updatedAt": "2024-08-16T11:40:59.029Z"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Introduction to Nest.js",
+        "description": "A beginner's course on Nest.js",
+        "createdAt": "2024-08-16T11:49:14.746Z",
+        "updatedAt": "2024-08-16T11:49:14.746Z",
+        "Lessons": [
+            {
+                "id": 3,
+                "title": "Getting Started with Nest.js",
+                "content": "This lesson covers the basics of Nest.js...",
+                "courseId": 10,
+                "createdAt": "2024-08-16T11:49:14.851Z",
+                "updatedAt": "2024-08-16T11:49:14.851Z"
+            },
+            {
+                "id": 4,
+                "title": "Nest.js Modules",
+                "content": "This lesson covers how to use modules in Nest.js...",
+                "courseId": 10,
+                "createdAt": "2024-08-16T11:49:14.851Z",
+                "updatedAt": "2024-08-16T11:49:14.851Z"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Introduction to Nest.js",
+        "description": "A beginner's course on Nest.js",
+        "createdAt": "2024-08-16T12:44:02.249Z",
+        "updatedAt": "2024-08-16T12:44:02.249Z",
+        "Lessons": [
+            {
+                "id": 5,
+                "title": "Getting Started with Nest.js",
+                "content": "This lesson covers the basics of Nest.js...",
+                "courseId": 11,
+                "createdAt": "2024-08-16T12:44:02.329Z",
+                "updatedAt": "2024-08-16T12:44:02.329Z"
+            },
+            {
+                "id": 6,
+                "title": "Nest.js Modules",
+                "content": "This lesson covers how to use modules in Nest.js...",
+                "courseId": 11,
+                "createdAt": "2024-08-16T12:44:02.330Z",
+                "updatedAt": "2024-08-16T12:44:02.330Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course Name",
+        "description": "Course Description",
+        "createdAt": "2024-08-16T10:35:39.917Z",
+        "updatedAt": "2024-08-16T10:35:39.917Z",
+        "Lessons": []
+    },
+    {
+        "id": 5,
+        "title": "Course Name",
+        "description": "Course Description",
+        "createdAt": "2024-08-16T11:02:00.797Z",
+        "updatedAt": "2024-08-16T11:02:00.797Z",
+        "Lessons": []
+    },
+    {
+        "id": 8,
+        "title": "Introduction to Node.js",
+        "description": "A beginner's course on Node.js",
+        "createdAt": "2024-08-16T11:26:58.768Z",
+        "updatedAt": "2024-08-16T11:26:58.768Z",
+        "Lessons": []
+    },
+    {
+        "id": 6,
+        "title": "Introduction to Node.js",
+        "description": "A beginner's course on Node.js",
+        "createdAt": "2024-08-16T11:12:13.151Z",
+        "updatedAt": "2024-08-16T11:12:13.151Z",
+        "Lessons": []
+    },
+    {
+        "id": 4,
+        "title": "Course Name",
+        "description": "Course Description",
+        "createdAt": "2024-08-16T10:58:58.974Z",
+        "updatedAt": "2024-08-16T10:58:58.974Z",
+        "Lessons": []
+    },
+    {
+        "id": 3,
+        "title": "Course Name",
+        "description": "Course Description",
+        "createdAt": "2024-08-16T10:58:50.693Z",
+        "updatedAt": "2024-08-16T10:58:50.693Z",
+        "Lessons": []
+    },
+    {
+        "id": 7,
+        "title": "Introduction to Node.js",
+        "description": "A beginner's course on Node.js",
+        "createdAt": "2024-08-16T11:21:28.192Z",
+        "updatedAt": "2024-08-16T11:21:28.192Z",
+        "Lessons": []
+    }
 ]
 ```
 - Create a Course
@@ -185,31 +304,48 @@ Endpoint: POST /api/courses
 
 Request Body:
 
-
 {
-  "name": "Course Name",
-  "description": "Course Description",
+  "title": "Introduction to Nest.js",
+  "description": "A beginner's course on Nest.js",
   "lessons": [
     {
-      "title": "Lesson Title",
-      "content": "Lesson Content"
+      "title": "Getting Started with Nest.js",
+      "content": "This lesson covers the basics of Nest.js..."
+    },
+    {
+      "title": "Nest.js Modules",
+      "content": "This lesson covers how to use modules in Nest.js..."
     }
   ]
 }
-Response:
 
+
+- Response:
 
 {
-  "id": "course_id",
-  "name": "Course Name",
-  "description": "Course Description",
-  "lessons": [
-    {
-      "id": "lesson_id",
-      "title": "Lesson Title",
-      "content": "Lesson Content"
-    }
-  ]
+    "id": 11,
+    "title": "Introduction to Nest.js",
+    "description": "A beginner's course on Nest.js",
+    "createdAt": "2024-08-16T12:44:02.249Z",
+    "updatedAt": "2024-08-16T12:44:02.249Z",
+    "Lessons": [
+        {
+            "id": 5,
+            "title": "Getting Started with Nest.js",
+            "content": "This lesson covers the basics of Nest.js...",
+            "courseId": 11,
+            "createdAt": "2024-08-16T12:44:02.329Z",
+            "updatedAt": "2024-08-16T12:44:02.329Z"
+        },
+        {
+            "id": 6,
+            "title": "Nest.js Modules",
+            "content": "This lesson covers how to use modules in Nest.js...",
+            "courseId": 11,
+            "createdAt": "2024-08-16T12:44:02.330Z",
+            "updatedAt": "2024-08-16T12:44:02.330Z"
+        }
+    ]
 }
 
 ```
